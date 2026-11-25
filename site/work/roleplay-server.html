@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roleplay game server with in-game interfaces | Arsenii Sydorenko</title>
+<meta name="description" content="Case study: game systems and more than twenty in-game web interfaces for a GTA: San Andreas multiplayer roleplay server on open.mp.">
+<link rel="canonical" href="https://sydorenkodev.co.uk/work/roleplay-server">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Arsenii Sydorenko">
+<meta property="og:title" content="Roleplay server: case study">
+<meta property="og:description" content="Game systems and in-game interfaces for a GTA: San Andreas multiplayer server: bank, phone, inventory, character creator and more.">
+<meta property="og:url" content="https://sydorenkodev.co.uk/work/roleplay-server">
+<meta property="og:image" content="https://sydorenkodev.co.uk/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#09090C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css?v=3">
+<script>if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js')</script>
+</head>
+<body class="theme-rp">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+  <header class="hero-card case-hero">
+    <div class="hero-inner">
+      <nav class="nav" aria-label="Main">
+        <a class="brand" href="/">Sydorenko<span>.dev</span></a>
+        <div class="nav-r">
+          <ul>
+            <li><a href="/#work">Work</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#process">Process</a></li>
+            <li><a href="/#about">About</a></li>
+          </ul>
+          <a class="btn btn-light btn-sm" href="/#contact">Send a message <span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        </div>
+      </nav>
+      <p class="crumbs"><a href="/#work">← All work</a><span>/</span><span>Case 02</span></p>
+      <h1 class="case-title" id="main">Roleplay server</h1>
+      <p class="case-sub">Game systems and in-game interfaces for GTA: San Andreas multiplayer</p>
+      <p class="case-lede">A roleplay server built from scratch: the game logic on the server, and the screens players use inside the game, from the bank and phone to the character creator.</p>
+      <dl class="case-facts">
+        <div><dt>Type</dt><dd>Self-initiated project</dd></div>
+        <div><dt>My role</dt><dd>Game systems, UI, database</dd></div>
+        <div><dt>Platform</dt><dd>open.mp (GTA: SA multiplayer)</dd></div>
+        <div><dt>Scope</dt><dd>28 modules, 20+ in-game screens</dd></div>
+      </dl>
+    </div>
+  </header>
+</div>
+
+<figure class="hero-media">
+  <!-- When the gameplay video is ready, swap the <img> for:
+       <video controls muted playsinline preload="metadata" poster="/assets/img/rp-charcreate.webp" width="1920" height="1080"><source src="/assets/img/rp-demo.mp4" type="video/mp4"></video> -->
+  <div class="frame-m"><img src="/assets/img/rp-charcreate.webp" width="1440" height="900" alt="Character creator: choose your character’s appearance, with arrow buttons and a gold confirm button over a night-city background" fetchpriority="high"></div>
+  <figcaption><span>Character creator, step 1</span><span>Interface language: Ukrainian</span></figcaption>
+</figure>
+
+<main>
+  <div class="wrap">
+    <section class="chapter rv" aria-labelledby="c1">
+      <header><span class="num">#01</span><h2 id="c1">The task</h2></header>
+      <div class="body">
+        <p class="lead">Roleplay servers depend on how believable the world feels and how easy it is to use, yet most still rely on text menus and chat commands.</p>
+        <p>I wanted a full in-game economy, with interfaces like a phone, a bank and an inventory that feel like modern app screens rather than pop-up text boxes.</p>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c2">
+      <header><span class="num">#02</span><h2 id="c2">What I did</h2></header>
+      <div class="body">
+        <p class="lead">I wrote the server systems, designed and built the in-game interfaces, and set up the database and deployment.</p>
+        <p>The game logic is around 21,000 lines of Pawn across 28 modules. The interfaces are around 15,000 lines of HTML, CSS and JavaScript, rendered inside the game through CEF.</p>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c3">
+      <header><span class="num">#03</span><h2 id="c3">Key features</h2></header>
+      <div class="body">
+        <ul class="feat">
+          <li><b>Player economy</b>Bank accounts and cash machines, card payments in shops, and a market.</li>
+          <li><b>Businesses</b>Shops players can buy and run, including a taxi company with a fleet, hiring and franchise tiers.</li>
+          <li><b>Jobs with progression</b>Taxi driver with dynamic routes, electrician and loader, with passenger and driver ratings.</li>
+          <li><b>Housing and vehicles</b>Houses, personal vehicles with fuel saved to the database, and moped rental.</li>
+          <li><b>World and community</b>Factions, a city hall with passports and complaints, radio, VIP and a donation shop.</li>
+          <li><b>New player quests</b>NPC quests for newcomers, and NPC trains running on recorded routes.</li>
+          <li><b>Inventory</b>Items across backpack, pockets, car boot and safe.</li>
+          <li><b>Admin tools</b>Over 150 chat commands for running the server.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c4">
+      <header><span class="num">#04</span><h2 id="c4">Stack</h2></header>
+      <div class="body">
+        <div class="stack-group"><span class="lbl">Game server</span><ul class="stack"><li>Pawn (open.mp)</li><li>MySQL / MariaDB</li></ul></div>
+        <div class="stack-group"><span class="lbl">In-game UI</span><ul class="stack"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>CEF</li><li>Vue</li><li>Tailwind</li></ul></div>
+        <div class="stack-group"><span class="lbl">Infrastructure</span><ul class="stack"><li>Docker</li><li>Node.js runner</li></ul></div>
+
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c5">
+      <header><span class="num">#05</span><h2 id="c5">Challenges</h2></header>
+      <div class="body">
+        <ol class="probs">
+          <li class="prob"><h3>Interfaces that sometimes disappeared</h3><p class="row"><span class="lbl">Problem</span><span>The phone, bank, cash machine, passport and quest screens would intermittently fail to show.</span></p><p class="row sol"><span class="lbl">Solution</span><span>I worked through it methodically. The logs ruled out reconnects, and comparing them with screens that always worked showed the in-game browser was being hidden in the same tick it was created, before it was ready. I fixed it in every affected module.</span></p></li>
+          <li class="prob"><h3>Building twenty screens without a tangle</h3><p class="row"><span class="lbl">Problem</span><span>Each interface needs to talk to the game server, and tightly coupled code would make every change risky.</span></p><p class="row sol"><span class="lbl">Solution</span><span>Each interface is a separate page, and the server and UI talk through named events. Screens can be built and tested on their own.</span></p></li>
+          <li class="prob"><h3>Data that stays correct</h3><p class="row"><span class="lbl">Problem</span><span>Vehicle fuel was only saved at refuelling, so the stored value could fall out of date.</span></p><p class="row sol"><span class="lbl">Solution</span><span>Fuel is now saved as it’s used, and every way a vehicle can spawn sets it explicitly.</span></p></li>
+          <li class="prob"><h3>Two players, one taxi</h3><p class="row"><span class="lbl">Problem</span><span>Two players could try to start a shift in the same car at the same moment.</span></p><p class="row sol"><span class="lbl">Solution</span><span>Starting a shift re-checks the vehicle and the player at the moment of confirmation, so only one can claim it.</span></p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c6">
+      <header><span class="num">#06</span><h2 id="c6">Result</h2></header>
+      <div class="body">
+        <p class="result">A working server with a full set of game systems and more than twenty in-game screens.</p>
+        <p>It’s packaged with Docker, and the database configuration is generated from environment variables, so it starts the same way every time.</p>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c7">
+      <header><span class="num">#07</span><h2 id="c7">Screens</h2></header>
+      <div class="body">
+        <div class="gallery">
+          <figure class="g-quarter tall">
+            <div class="g-frame"><img src="/assets/img/rp-phone.webp" width="420" height="820" alt="Smartphone lock screen with the time and date" loading="lazy" decoding="async"></div>
+            <figcaption><b>Phone</b>Documents, bank, contacts, messages and taxi.</figcaption>
+          </figure>
+          <figure class="g-quarter tall">
+            <div class="g-frame"><img src="/assets/img/rp-bank.webp" width="600" height="660" alt="Bank window with account balance, cash on hand, and deposit, withdraw and transfer tabs" loading="lazy" decoding="async"></div>
+            <figcaption><b>Bank</b>Deposit, withdrawal and transfers.</figcaption>
+          </figure>
+          <figure class="g-quarter tall">
+            <div class="g-frame"><img src="/assets/img/rp-atm.webp" width="600" height="660" alt="Cash machine terminal of a fictional bank with six large action buttons" loading="lazy" decoding="async"></div>
+            <figcaption><b>Cash machine</b>Terminal for a fictional in-game bank.</figcaption>
+          </figure>
+          <figure class="g-quarter tall">
+            <div class="g-frame"><img src="/assets/img/rp-minigame.webp" width="600" height="660" alt="Delivery job mini-game: press space when the marker is in the green zone, three times in a row" loading="lazy" decoding="async"></div>
+            <figcaption><b>Job mini-game</b>Timing challenge for the delivery job.</figcaption>
+          </figure>
+          <!-- More screens: copy a <figure class="g-quarter tall"> … </figure> block per screenshot. -->
+        </div>
+        <p class="credit">The in-game interface language is Ukrainian. All shops, banks and services in the game are fictional.</p>
+      </div>
+    </section>
+
+    <nav class="next" aria-label="Next case">
+      <a href="/work/barbershop"><span><span class="k">Next case · 03</span><span class="t">Victoria Square Barbers</span></span><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+    </nav>
+  </div>
+
+  <section class="cta wrap" aria-labelledby="cta-h">
+    <div class="cta-card">
+      <div><h2 id="cta-h">Running a game community?</h2><p>HUDs, phones, inventories and server systems for open.mp and SA-MP. Message me with your platform and what you need.</p></div>
+      <a class="btn btn-light" href="/#contact">Send a message <span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Arsenii Sydorenko · Northern Ireland, UK</span>
+    <span>Web design and development</span>
+    <a href="/">Home</a>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

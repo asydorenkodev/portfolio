@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Victoria Square Barbers | Belfast</title>
+  <meta name="description" content="Cuts, skin fades and hot-towel shaves at Victoria Square, Belfast. Finished with Kevin.Murphy. Book a chair online.">
+  <meta name="theme-color" content="#07060b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/product_dark.webp">
+  <link rel="preload" as="image" href="assets/img/product_lit.webp">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%230b0a10'/%3E%3Cpath d='M8 27a12 12 0 0 1 24 0M14 27a6 12 0 0 1 12 0M20 15v12M6 27h28M20 11v4' fill='none' stroke='%23a597ff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- logo mark: the glass dome over Victoria Square, ribs and gallery ring -->
+  <symbol id="mark" viewBox="0 0 40 40">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6.5 28a13.5 13.5 0 0 1 27 0" stroke-width="2"/>
+      <path d="M13.2 28A6.8 13.5 0 0 1 26.8 28" stroke-width="1.3" opacity=".75"/>
+      <path d="M20 14.5V28" stroke-width="1.3" opacity=".75"/>
+      <path d="M8.6 21.6h22.8" stroke-width="1.1" opacity=".5"/>
+      <path d="M4 28h32" stroke-width="2"/>
+      <path d="M20 9.5v5" stroke-width="2"/>
+      <path d="M11 32.5h18" stroke-width="1.3" opacity=".6"/>
+    </g>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9.5l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+</svg>
+
+<div class="cursor" aria-hidden="true"><div class="cursor__ring"></div><div class="cursor__dot"></div></div>
+<div class="grain" aria-hidden="true"></div>
+<canvas class="stars" aria-hidden="true"></canvas>
+
+<main>
+  <section class="frame" id="top" aria-label="Victoria Square Barbers">
+
+    <!-- light, haze, dust -->
+    <div class="sky" aria-hidden="true">
+      <div class="beam"></div>
+      <div class="halo"></div>
+      <div class="smoke smoke--a"></div>
+      <div class="smoke smoke--b"></div>
+    </div>
+    <canvas class="dust" aria-hidden="true"></canvas>
+    <div class="torch" aria-hidden="true"></div>
+
+    <!-- nav -->
+    <header class="nav">
+      <a class="logo" href="#top" aria-label="Victoria Square Barbers, home">
+        <svg class="logo__mark"><use href="#mark"/></svg>
+        <span class="logo__type">Victoria Square<i>Barbers · Belfast</i></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Main">
+        <a href="#about" data-roll>About</a>
+        <div class="drop">
+          <button class="drop__btn" aria-expanded="false" aria-controls="services"><span data-roll>Services</span><svg><use href="#i-chev"/></svg></button>
+          <div class="drop__panel glass" id="services">
+            <span class="sheen"></span>
+            <ul>
+              <li><a href="#book"><span>Cut &amp; finish</span><b>£38</b></a></li>
+              <li><a href="#book"><span>Skin fade</span><b>£42</b></a></li>
+              <li><a href="#book"><span>Beard sculpt</span><b>£26</b></a></li>
+              <li><a href="#book"><span>Hot-towel shave</span><b>£34</b></a></li>
+              <li><a href="#book"><span>Cut &amp; beard</span><b>£58</b></a></li>
+            </ul>
+            <p>45 minutes a chair. No rushing.</p>
+          </div>
+        </div>
+        <a href="#barbers" data-roll>Barbers</a>
+        <a href="#shop" data-roll>Shop</a>
+        <a href="#visit" data-roll>Visit</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a class="pill pill--ghost" href="#gift"><span data-roll>Gift cards</span></a>
+        <a class="pill pill--violet" href="#book"><span data-roll>Book a chair</span><i class="arw"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></i></a>
+      </div>
+      <button class="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    </header>
+
+    <div class="menu" aria-hidden="true">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#barbers">Barbers</a><a href="#shop">Shop</a><a href="#book">Book a chair</a>
+    </div>
+
+    <!-- the scene: distant stones, the bottle on its rock, water -->
+    <div class="scene">
+      <img class="far far--l" src="assets/img/rock_l.webp" alt="" aria-hidden="true">
+      <img class="far far--r" src="assets/img/rock_r.webp" alt="" aria-hidden="true">
+
+      <figure class="product" id="product">
+        <img class="product__dark" src="assets/img/product_dark.webp" alt="Kevin.Murphy Flawless styling lotion on a wet black stone">
+        <img class="product__lit" src="assets/img/product_lit.webp" alt="" aria-hidden="true">
+        <button class="product__hit" aria-label="Light up the bottle"></button>
+        <figcaption class="tag">
+          <i class="tag__line"></i>
+          <span class="tag__body">
+            <b>Kevin.Murphy</b>
+            <span>Flawless · 200 ml</span>
+            <em>£38 at the desk</em>
+          </span>
+        </figcaption>
+      </figure>
+
+      <div class="water" aria-hidden="true">
+        <canvas class="water__canvas"></canvas>
+        <div class="water__glints"></div>
+      </div>
+    </div>
+
+    <!-- copy, under the bottle -->
+    <div class="copy">
+      <h1 class="title" data-words>Sharp work under the <em>dome</em></h1>
+      <p class="sub" data-in>Cuts, skin fades and hot-towel shaves on Victoria Square, Belfast. Every chair is finished with Kevin.Murphy.</p>
+      <a class="pill pill--white" href="#book" data-in><span data-roll>Book your chair</span><i class="arw"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></i></a>
+    </div>
+
+    <!-- glass plates -->
+    <a class="card card--barber glass" href="#barbers" data-tilt data-card>
+      <span class="sheen"></span>
+      <span class="card__head">
+        <span class="card__label" data-roll>Head barber</span>
+        <i class="arw arw--round"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></i>
+      </span>
+      <span class="card__title"><span data-roll>Fades, beards,</span><span data-roll>straight razor</span></span>
+      <span class="card__meta">14 years on the chair</span>
+      <span class="card__portrait" data-portrait>
+        <img class="card__portrait-base" src="assets/img/man_sil_dark.webp" alt="Silhouette of the head barber">
+        <img class="card__portrait-lit" src="assets/img/man_sil_lit.webp" alt="" aria-hidden="true">
+      </span>
+    </a>
+
+    <a class="card card--slot glass" href="#book" data-tilt data-card>
+      <span class="sheen"></span>
+      <span class="card__head">
+        <span class="card__label" data-roll data-slot-label>Next free chair</span>
+        <i class="arw arw--round"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></i>
+      </span>
+      <span class="card__big" data-slot>14:30</span>
+      <span class="card__bar"><i data-bar></i></span>
+      <span class="card__foot"><span data-slot-day>Today</span><span><b data-booked>0</b>% booked</span></span>
+    </a>
+
+    <!-- footer line inside the frame -->
+    <div class="base">
+      <span><svg><use href="#i-pin"/></svg>Victoria Square, Belfast BT1</span>
+      <span class="base__hint" data-hint>Move the light across the stone</span>
+      <span><svg><use href="#i-clock"/></svg>Mon–Sat 09–19 · Thu till 21</span>
+    </div>
+  </section>
+</main>
+
+<script src="js/main.js?v=3" defer></script>
+</body>
+</html>

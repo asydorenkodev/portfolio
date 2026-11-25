@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProReview: match analysis for Counter-Strike 2 | Arsenii Sydorenko</title>
+<meta name="description" content="Case study: a web app that analyses Counter-Strike 2 match files in the browser, with accounts, Steam and FACEIT sign-in, plans and Paddle billing.">
+<link rel="canonical" href="https://sydorenkodev.co.uk/work/proreview">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Arsenii Sydorenko">
+<meta property="og:title" content="ProReview: case study">
+<meta property="og:description" content="Match analysis for Counter-Strike 2: in-browser parsing, accounts, Steam and FACEIT sign-in, plans and billing.">
+<meta property="og:url" content="https://sydorenkodev.co.uk/work/proreview">
+<meta property="og:image" content="https://sydorenkodev.co.uk/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#09090C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css?v=3">
+<script>if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js')</script>
+</head>
+<body class="theme-pr">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+  <header class="hero-card case-hero">
+    <div class="hero-inner">
+      <nav class="nav" aria-label="Main">
+        <a class="brand" href="/">Sydorenko<span>.dev</span></a>
+        <div class="nav-r">
+          <ul>
+            <li><a href="/#work">Work</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#process">Process</a></li>
+            <li><a href="/#about">About</a></li>
+          </ul>
+          <a class="btn btn-light btn-sm" href="/#contact">Send a message <span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        </div>
+      </nav>
+      <p class="crumbs"><a href="/#work">← All work</a><span>/</span><span>Case 01</span></p>
+      <h1 class="case-title" id="main">ProReview</h1>
+      <p class="case-sub">In-depth match analysis for Counter-Strike 2</p>
+      <p class="case-lede">A web app that turns a CS2 match file into a clear breakdown of what went wrong and what to practise next. The file never leaves the player’s computer.</p>
+      <dl class="case-facts">
+        <div><dt>Type</dt><dd>Self-initiated product</dd></div>
+        <div><dt>My role</dt><dd>Design, front end, back end</dd></div>
+        <div><dt>Interface</dt><dd>English and Russian, light and dark</dd></div>
+        <div><dt>Live site</dt><dd>Launching soon<!-- When live: <a href="https://proreview.team" target="_blank" rel="noopener">proreview.team ↗</a> --></dd></div>
+      </dl>
+    </div>
+  </header>
+</div>
+
+<figure class="hero-media">
+  <div class="frame-m">
+    <video controls muted playsinline preload="metadata" poster="/assets/img/proreview-poster.webp" width="1280" height="720">
+      <source src="/assets/img/proreview-demo.mp4" type="video/mp4">
+    </video>
+  </div>
+  <figcaption><span>22-second product walkthrough</span><span>2D viewer, progress, plans</span></figcaption>
+</figure>
+
+<main>
+  <div class="wrap">
+    <section class="chapter rv" aria-labelledby="c1">
+      <header><span class="num">#01</span><h2 id="c1">The task</h2></header>
+      <div class="body">
+        <p class="lead">Players who want to improve have hours of match recordings and no quick way to see where rounds were lost.</p>
+        <p>I wanted a tool that reads a match file and answers three questions: where did I die, why, and what should I practise next. Files had to stay private, so the analysis needed to run on the player’s own device.</p>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c2">
+      <header><span class="num">#02</span><h2 id="c2">What I did</h2></header>
+      <div class="body">
+        <p class="lead">I designed and built the whole product: the interface, the analysis engine, the server, accounts and billing.</p>
+        <p>The analysis is a static site that works on its own. The accounts server sits on top of it and adds sign-in, plans, payments, Discord and an admin panel.</p>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c3">
+      <header><span class="num">#03</span><h2 id="c3">Key features</h2></header>
+      <div class="body">
+        <ul class="feat">
+          <li><b>Analysis in the browser</b>.dem, .dem.gz and .dem.zst files are processed on the device in 20 to 60 seconds. Nothing is uploaded.</li>
+          <li><b>Deep breakdown</b>Deaths, kills, duels, shooting and time-to-kill, rounds, positions, and what each type of mistake costs in Elo.</li>
+          <li><b>2D round replay</b>Radars for 44 maps, with upper and lower levels on Nuke and Vertigo, a timeline, drawing, zoom and hotkeys. A 3D view is built in three.js.</li>
+          <li><b>Mistake playlist</b>Every death with the same mistake, back to back.</li>
+          <li><b>Progress over time</b>Charts across the last 10 or 50 matches: rating, ADR, headshot rate, first-bullet accuracy and opening deaths.</li>
+          <li><b>Post-match homework</b>The three most expensive deaths and a drill for the main mistake, with a daily streak.</li>
+          <li><b>My matches</b>Matches stored privately in the browser and reopened instantly.</li>
+          <li><b>Accounts and plans</b>Email sign-up, Steam and FACEIT sign-in, Free, Pro, Team and Tier 1 plans with Paddle billing, Discord and an admin panel.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c4">
+      <header><span class="num">#04</span><h2 id="c4">Stack</h2></header>
+      <div class="body">
+        <div class="stack-group"><span class="lbl">Front end</span><ul class="stack"><li>JavaScript (ES modules)</li><li>Web Workers</li><li>IndexedDB</li><li>three.js</li><li>esbuild</li></ul></div>
+        <div class="stack-group"><span class="lbl">Back end</span><ul class="stack"><li>Node.js 22</li><li>node:sqlite</li><li>node:test</li><li>No framework</li></ul></div>
+        <div class="stack-group"><span class="lbl">Integrations</span><ul class="stack"><li>Steam OpenID</li><li>FACEIT OAuth 2.0 + PKCE</li><li>Paddle</li><li>Discord API</li></ul></div>
+        <div class="stack-group"><span class="lbl">Tooling</span><ul class="stack"><li>Custom i18n build (Node + Python)</li></ul></div>
+
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c5">
+      <header><span class="num">#05</span><h2 id="c5">Challenges</h2></header>
+      <div class="body">
+        <ol class="probs">
+          <li class="prob"><h3>Large files, no uploads</h3><p class="row"><span class="lbl">Problem</span><span>A full match file is big, and players shouldn’t have to send it to a server.</span></p><p class="row sol"><span class="lbl">Solution</span><span>Parsing runs in a Web Worker, so the interface stays responsive while the match is read. Compressed files are unpacked on the device.</span></p></li>
+          <li class="prob"><h3>Maps with more than one level</h3><p class="row"><span class="lbl">Problem</span><span>On Nuke and Vertigo, areas sit on top of each other, so a single radar puts players in the wrong place.</span></p><p class="row sol"><span class="lbl">Solution</span><span>Separate upper and lower radars, with each player shown on the level they’re actually on.</span></p></li>
+          <li class="prob"><h3>Accounts people can trust</h3><p class="row"><span class="lbl">Problem</span><span>Real sign-ups and payments mean real security requirements.</span></p><p class="row sol"><span class="lbl">Solution</span><span>Passwords are stored only as salted scrypt hashes. Session cookies are HttpOnly, and only a hash of each token is kept. One-time email links are hashed and expire. Cross-site requests are rejected, sign-in and sign-up are rate limited, and “forgot password” answers the same way for any address, so it can’t be used to find out who is registered.</span></p></li>
+          <li class="prob"><h3>Three ways in, one account</h3><p class="row"><span class="lbl">Problem</span><span>Players use email, Steam or FACEIT, and often more than one.</span></p><p class="row sol"><span class="lbl">Solution</span><span>All three link to a single profile. Steam responses are verified with Steam itself, and Steam and FACEIT sign-in is bound to the browser that started it.</span></p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c6">
+      <header><span class="num">#06</span><h2 id="c6">Result</h2></header>
+      <div class="body">
+        <p class="result">A complete, working product: analysis, accounts, plans and billing in one place.</p>
+        <p>Authentication, admin, billing and the Discord integration are covered by automated tests.</p>
+      </div>
+    </section>
+    <section class="chapter rv" aria-labelledby="c7">
+      <header><span class="num">#07</span><h2 id="c7">Screens</h2></header>
+      <div class="body">
+        <div class="gallery">
+          <figure class="g-wide">
+            <div class="g-frame"><img src="/assets/img/proreview-summary.webp" width="1440" height="900" alt="Match summary: map, score, player ratings, key stats and the cost of each mistake in Elo" loading="lazy" decoding="async"></div>
+            <figcaption><b>Match summary</b>The player’s key stats and the main mistakes of the match.</figcaption>
+          </figure>
+          <!-- More screens: copy a <figure class="g-half"> … </figure> block per screenshot. -->
+        </div>
+        <p class="credit">Map radar images © Valve Corporation. ProReview is an independent project and is not affiliated with Valve.</p>
+      </div>
+    </section>
+
+    <nav class="next" aria-label="Next case">
+      <a href="/work/roleplay-server"><span><span class="k">Next case · 02</span><span class="t">Roleplay server</span></span><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+    </nav>
+  </div>
+
+  <section class="cta wrap" aria-labelledby="cta-h">
+    <div class="cta-card">
+      <div><h2 id="cta-h">Need a web app like this?</h2><p>Logins, payments, dashboards and data. Tell me what you’re building and I’ll reply within one working day.</p></div>
+      <a class="btn btn-light" href="/#contact">Send a message <span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Arsenii Sydorenko · Northern Ireland, UK</span>
+    <span>Web design and development</span>
+    <a href="/">Home</a>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>
