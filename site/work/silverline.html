@@ -70,7 +70,7 @@
       <header><span class="num">#02</span><h2 id="c2">What I did</h2></header>
       <div class="body">
         <p class="lead">I set the art direction, built every image, wrote the copy and coded the page by hand.</p>
-        <p>The four source photos had four different glasses, one of them a sundae dish on a stem. A Python script draws one glass (walls, rim light, condensation, frost) and moves each drink and its topping into it, so the cup never changes. The ice scene comes from a back-lit photo: the backdrop is the same photo, stretched and blurred like a shallow depth of field, with the sharp ice kept in the middle.</p>
+        <p>The four source photos had four different glasses, one of them a sundae dish on a stem. One glass is drawn from scratch (walls, rim light, condensation, frost) and each drink and its topping are moved into it, so the cup never changes. The ice scene comes from a back-lit photo: the backdrop is the same photo, stretched and blurred like a shallow depth of field, with the sharp ice kept in the middle.</p>
       </div>
     </section>
     <section class="chapter rv" aria-labelledby="c3">
@@ -90,14 +90,13 @@
       <header><span class="num">#04</span><h2 id="c4">Stack</h2></header>
       <div class="body">
         <div class="stack-group"><span class="lbl">Built with</span><ul class="stack"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Canvas 2D</li><li>CSS masks</li></ul></div>
-        <div class="stack-group"><span class="lbl">Image work</span><ul class="stack"><li>Python</li><li>OpenCV</li><li>Pillow</li><li>NumPy</li></ul></div>
       </div>
     </section>
     <section class="chapter rv" aria-labelledby="c5">
       <header><span class="num">#05</span><h2 id="c5">Challenges</h2></header>
       <div class="body">
         <ol class="probs">
-          <li class="prob"><h3>Four photos, four glasses</h3><p class="row"><span class="lbl">Problem</span><span>The drinks were shot in a tall tumbler, a pint glass, a milkshake glass and a sundae dish. Side by side they looked like four different shops.</span></p><p class="row sol"><span class="lbl">Solution</span><span>The script traces the inside of each glass and maps it into one shape, then cuts the cream, caramel and cherry above the rim. Straws were taken out so every cup reads the same.</span></p></li>
+          <li class="prob"><h3>Four photos, four glasses</h3><p class="row"><span class="lbl">Problem</span><span>The drinks were shot in a tall tumbler, a pint glass, a milkshake glass and a sundae dish. Side by side they looked like four different shops.</span></p><p class="row sol"><span class="lbl">Solution</span><span>The inside of each glass is traced and mapped into one shape, and the cream, caramel and cherry above the rim are cut out separately. Straws were taken out so every cup reads the same.</span></p></li>
           <li class="prob"><h3>Extending a portrait photo</h3><p class="row"><span class="lbl">Problem</span><span>The ice photo is tall and narrow, and a wide screen needs three times its width. Mirroring it made a kaleidoscope of twin mountains.</span></p><p class="row sol"><span class="lbl">Solution</span><span>The backdrop is the same photo blown up and heavily blurred, so the sides read as out of focus. Only the middle stays sharp, at its real size.</span></p></li>
           <li class="prob"><h3>A name you can always read</h3><p class="row"><span class="lbl">Problem</span><span>White lettering on the cup vanished on the cream-heavy drinks.</span></p><p class="row sol"><span class="lbl">Solution</span><span>Each drink says whether it is light or dark, and the name switches to a dark chocolate colour on the light ones.</span></p></li>
         </ol>
